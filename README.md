@@ -33,3 +33,8 @@ Make an exercise around Aaron's problem --> Reference to OR that has arrived in 
 - orElseGet
 - Optionals are important assets in Streaming APIs
 - Dodgy example with Java 8 Optionals that is tackled in Java 9+
+
+## Things not covered
+- How to use optionals and how not to use optionals
+- Best practices vs pitfalls
+- Ideas?
