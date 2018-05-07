@@ -25,6 +25,10 @@ public class PhoneBook {
         return null;
     }
 
+    public Optional<String> findNameByPhoneNumber(String phoneNumber){
+        return null;
+    }
+
     @Override
     public String toString() {
         System.out.println("Hello from PhoneBook's toString method");

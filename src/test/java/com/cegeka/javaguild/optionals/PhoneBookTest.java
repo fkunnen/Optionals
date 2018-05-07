@@ -34,4 +34,20 @@ public class PhoneBookTest {
 
         phoneNumber.get();
     }
+
+    @Test
+    public void findNameByPhoneNumber() {
+        Optional<String> name = phoneBook.findNameByPhoneNumber("016/161616");
+
+        assertThat(name.get()).isEqualTo("Jos de Vos");
+    }
+
+    @Test
+    public void findNameByPhoneNumber_NotFound() {
+        expectedException.expect(NoSuchElementException.class);
+
+        Optional<String> phoneNumber = phoneBook.findPhoneNumberByName("016/161619");
+
+        phoneNumber.get();
+    }
 }

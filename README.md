@@ -23,7 +23,8 @@ Can you reimplement exercise 2 using streams instead of using PhoneBook's findPh
 Can you reimplement exercise 3 using streams instead of using PhoneBook's findPhoneNumberByName
 
 ## Exercise 7
-Make an exercise around Aaron's problem --> Reference to OR that has arrived in Java 9
+Implement findNameByPhoneNumber in PhoneBook class that returns an optional.
+Implement findPhoneNumberByNameOrNameByPhoneNumber in PhoneBookCrawler class. First search the phone book by name. If that returns nothing search the phone book by phone number. If that still returns nothing return the phone number of Jos de Vos.
 
 ## Things covered
 - Create an optional
