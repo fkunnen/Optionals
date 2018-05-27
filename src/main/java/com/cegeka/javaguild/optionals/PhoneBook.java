@@ -1,6 +1,8 @@
 package com.cegeka.javaguild.optionals;
 
+import javax.swing.text.html.Option;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 public class PhoneBook {
@@ -22,11 +24,19 @@ public class PhoneBook {
     }
 
     public Optional<String> findPhoneNumberByName(String name){
-        return null;
+        if (phoneBookEntries.containsKey(name)){
+            return Optional.of(phoneBookEntries.get(name));
+        }
+        return Optional.empty();
     }
 
     public Optional<String> findNameByPhoneNumber(String phoneNumber){
-        return null;
+        for (Map.Entry<String, String> entry : phoneBookEntries.entrySet()){
+            if (entry.getValue().equals(phoneNumber)){
+                return Optional.of(entry.getKey());
+            }
+        }
+        return Optional.empty();
     }
 
     @Override

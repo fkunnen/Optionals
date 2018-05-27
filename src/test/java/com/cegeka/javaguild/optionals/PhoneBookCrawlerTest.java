@@ -22,10 +22,17 @@ public class PhoneBookCrawlerTest {
     }
 
     @Test
+    public void findPhoneNumberByName_AndFindSomething(){
+        String phoneNumber = phoneBookCrawler.findPhoneNumberByNameAndPrintPhoneBookIfNothingFound("Jos de Vos");
+
+        assertThat(phoneNumber).isEqualTo("016/161616");
+    }
+
+    @Test
     public void findPhoneNumberByNameAndReturnEntirePhoneBookIfNothingFound() {
         String phoneBook = phoneBookCrawler.findPhoneNumberByNameAndPrintPhoneBookIfNothingFound("Raf de Giraf");
 
-        assertThat(phoneBook).isEqualTo(phoneBookCrawler.getPhoneBook().toString());
+        assertThat(phoneBook).isEqualTo("PhoneBook{phoneBookEntries={An de Toekan=016/161617, Jos de Vos=016/161616, Kris de Vis=016/161618}}");
     }
 
     @Test

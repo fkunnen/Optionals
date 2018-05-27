@@ -22,14 +22,14 @@ public class PhoneBookTest {
 
         Optional<String> phoneNumber = phoneBook.findPhoneNumberByName(josDeVos);
 
-        assertThat(phoneNumber.get()).isEqualTo("016/16161616");
+        assertThat(phoneNumber.get()).isEqualTo("016/161616");
     }
 
     @Test
     public void findPhoneNumberByName_NotFound() {
         expectedException.expect(NoSuchElementException.class);
 
-        String josDeVos = "Jos de Vos";
+        String josDeVos = "Jos de Voss";
         Optional<String> phoneNumber = phoneBook.findPhoneNumberByName(josDeVos);
 
         phoneNumber.get();
